@@ -15,7 +15,6 @@ async function bootstrap() {
       transform: true,
     }),
   );
-  // app.useGlobalFilters(new HttpExceptionFilter());
   app.useGlobalInterceptors(new ConflictInterceptor());
   app.useGlobalInterceptors(new DatabaseInterceptor());
   app.useGlobalInterceptors(new UnauthorizedInterceptor());
